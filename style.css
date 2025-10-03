@@ -134,3 +134,9 @@ main {
 
 
 }
+.card {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .12);
+    transition: transform .3s ease, box-shadow .3s ease, filter .3s ease;
+    margin: 2px auto 2px auto ;
+
+}
