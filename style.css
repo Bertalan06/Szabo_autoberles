@@ -16,6 +16,8 @@ body {
     grid-template-rows: auto 1fr auto;
     grid-template-areas: "header" "main" "footer";
     min-height: 100vh;
+    display: grid;
+    
 }
 
 /* HERO */
@@ -134,9 +136,56 @@ main {
 
 
 }
-.card {
-    box-shadow: 0 10px 30px rgba(0, 0, 0, .12);
-    transition: transform .3s ease, box-shadow .3s ease, filter .3s ease;
-    margin: 2px auto 2px auto ;
 
+/* Card styles */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+.card {
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+.card:hover {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+    scale: 1.05;
+    transition: scale 0.3s;
+}
+.card-body {
+    padding: 1.2rem;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 0.7rem;
+}
+.card-text {
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+}
+.card-price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #3395fd;
+    margin-top: auto;
+}
+.card-img-top {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
+    border-bottom: 1px solid #eee;
+    display: block;
+    cursor: zoom-in;
 }
