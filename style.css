@@ -17,7 +17,7 @@ body {
     grid-template-areas: "header" "main" "footer";
     min-height: 100vh;
     display: grid;
-    
+
 }
 
 /* HERO */
@@ -137,27 +137,41 @@ main {
 
 }
 
+.autok_tabla {
+    /* Make sure the wrapper inside a .row behaves like a proper column */
+    width: 100%;
+    box-sizing: border-box;
+}
+
 /* Card styles */
 .card-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
     margin: 2rem 0;
+    align-items: stretch;
 }
+.card-container .card {
+    flex: 1 1 220px; /* preferred base width */
+    min-width: 200px;
+    max-width: 420px;
+}
+
 .card {
     background: #fff;
     border-radius: 1rem;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
     overflow: hidden;
-    transition: box-shadow 0.2s;
     display: flex;
     flex-direction: column;
+    transition: box-shadow .3s ease, transform .3s ease;
 }
+
 .card:hover {
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
-    scale: 1.05;
-    transition: scale 0.3s;
+    transform: translateY(-4px) scale(1.05);
 }
+
 .card-body {
     padding: 1.2rem;
     flex: 1 1 auto;
@@ -165,21 +179,25 @@ main {
     flex-direction: column;
     justify-content: space-between;
 }
+
 .card-title {
     font-size: 1.3rem;
     font-weight: bold;
     margin-bottom: 0.7rem;
 }
+
 .card-text {
     padding-left: 1rem;
     margin-bottom: 1rem;
 }
+
 .card-price {
     font-size: 1.1rem;
     font-weight: bold;
     color: #3395fd;
     margin-top: auto;
 }
+
 .card-img-top {
     width: 100%;
     height: 220px;
