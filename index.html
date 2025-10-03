@@ -22,302 +22,479 @@
     <!-- https://animate.style/ -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/7c18bf1db8.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </head>
 
 <body>
-    <header class="header">
-        <!-- Full-viewport hero with background image -->
-        <div id="hero">
-            <div class="hero-content">
-                <h1 style="margin: auto; text-align: center;">Autóbérlés</h1>
-                <h3>Megbízható, gyors és egyszerű autóbérlés Ikerváron! Csak és kizárólag kíváló
-                    állapotú gépsárkányok!</h3>
+    <div id="firstRow" class="">
+        <header class="header">
+            <!-- Full-viewport hero with background image -->
+            <div id="hero">
+                <div class="hero-content">
+                    <h1 style="margin: auto; text-align: center;">Autóbérlés</h1>
+                    <h3>Megbízható, gyors és egyszerű autóbérlés Ikerváron! Csak és kizárólag kíváló
+                        állapotú gépsárkányok!</h3>
 
-            </div>
-        </div>
-
-        <!-- Small top bar that appears when the page is scrolled -->
-        <div class="top-bar" id="topBar" aria-hidden="true">
-            <div class="brand">
-                <h1>Autóbérlés</h1>
-            </div>
-
-        </div>
-    </header>
-
-    <main class="main" style="margin-top: 7.5px; margin-bottom: 7.5px;" id="gorget">
-        <div class="row">
-            <div class="col-md-6">
-                <h3 style="font-weight: bold;">Miért válasszon minket?</h3>
-                <p>Gyors, egyszerű és megbízható autóbérlés</p>
-                <p>Nálunk az autóbérlés nem bonyolult – pár perc alatt lefoglalhatja a járművet, amire szüksége van.
-                    Modern, jól karbantartott gépjárműparkunkkal és rugalmas feltételeinkkel biztosítjuk, hogy Ön mindig
-                    kényelmesen és biztonságban utazhasson.</p>
-                <ul>
-                    <li>Kíváló ár-érték arány</li>
-                    <li>Átlátható bérlési feltételek</li>
-                    <li>Barátságos és segítőkész ügyfélszolgálat</li>
-                    <li>Folyamatosan karbantartott, tiszta autók</li>
-                </ul>
-            </div>
-            <div class="col-md-6">
-
-                <img src="kepek/garage.jpg" alt="Car Image" class="img-fluid rounded shadow-lg kiemelkedik"
-                    style="left: 60%;">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <img src="kepek/csapatkep.png" alt="Car Image" class="img-fluid rounded shadow-lg kiemelkedik">
-            </div>
-            <div class="col-md-6">
-                <h3 style="font-weight: bold;">Rólunk</h3>
-                <p>A Szabó Autókölcsönzés egy családi vállalkozásként indult, mára pedig a régió egyik megbízható
-                    szereplőjévé vált az autóbérlés területén. Küldetésünk, hogy ügyfeleink gyorsan és problémamentesen
-                    találjanak megfelelő járművet akár üzleti útra, nyaralásra vagy hétvégi kiruccanásra.</br>
-                    A flottánkban megtalálhatóak a gazdaságos városi kisautóktól a családi egyterűeken át egészen a
-                    prémium kategóriás modellekig szinte minden járműtípus. Fontos számunkra az elégedettség, ezért
-                    minden bérlést személyre szabottan kezelünk.</p>
-            </div>
-        </div>
-        <div class="row" style="border-bottom: solid 2px grey;">
-            <div class="col-md-6">
-                <h3 style="font-weight: bold;">Bérlési feltételek</h3>
-                <ul>
-                    <li>Érvényes személyi igazolvány és jogosítvány (minimum 1 éves) szüksége.</li>
-                    <li>A bérlőnek legalább 18 évesnek kell lennie.</li>
-                </ul>
-                <h3 style="font-weight: bold;">Autó átvétele & visszaadása</h3>
-                <ul>
-                    <li>Az autó átvételekor a bérlőnek alá kell írnia a bérleti szerződést és át kell vennie a járművet.
-                    </li>
-                    <li>Az autót tisztán és teljes tankkal kell visszaadni.</li>
-                </ul>
-            </div>
-            <div class="col-md-6">
-                <h3 style="font-weight: bold;">Foglalás & fizetés:</h3>
-                <ul>
-                    <li>A foglalás véglegesítéséhez előleg vagy teljes összeg befizetése szükséges.</li>
-                    <li>Elfogadott fizetési módok: készpénz, bankkártya, átutalás.</li>
-                </ul>
-                <h3 style="font-weight: bold;">Tilos:</h3>
-                <ul>
-                    <li>A jármű bármiféle szándékos módosítása, rongálása.</li>
-                    <li>A jármű engedély nélküli továbbadása harmadik félnek.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 autok_tabla">
-                <div class="card-container">
-                    <div class="card ">
-                        <img src="kepek/raptor.jfif" class="card-img-top" alt="Ford Raptor">
-                        <div class="card-body">
-                            <h5 class="card-title">Ford Raptor</h5>
-                            <ul class="card-text">
-                                <li>3 literes V6 EcoBoost</li>
-                                <li>4x4 hajtás</li>
-                                <li>292 HP</li>
-                                <li>felező</li>
-                                <li>3500 kg a maximálisan vontatható tömeg</li>
-                            </ul>
-                            <p class="card-price">5 millio Ft/Nap</p>
-                        </div>
-                    </div>
-                    <div class="card ">
-                        <img src="kepek/xclass.jpg" class="card-img-top" alt="Mercedes Xclass">
-                        <div class="card-body">
-                            <h5 class="card-title">Mercedes Xclass</h5>
-                            <ul class="card-text">
-                                <li>4.0 V8 motor</li>
-                                <li>520 HP</li>
-                                <li>4MATIC+</li>
-                                <li>fényfíd</li>
-                                <li>csörlő</li>
-                            </ul>
-                            <p class="card-price">100 000 Ft/Nap</p>
-                        </div>
-                    </div>
-                    <div class="card ">
-                        <img src="kepek/m4competition.webp" class="card-img-top" alt="BMW M4 Competition">
-                        <div class="card-body">
-                            <h5 class="card-title">BMW M4 Competition</h5>
-                            <ul class="card-text">
-                                <li>3.0 soros 6 hengeres motor</li>
-                                <li>510 HP</li>
-                                <li>sport futómű</li>
-                                <li>M packet</li>
-                                <li>xDrive</li>
-                            </ul>
-                            <p class="card-price">80 000 Ft/Nap</p>
-                        </div>
-                    </div>
-                    <div class="card ">
-                        <img src="kepek/Mercedes-AMG.jpg" class="card-img-top" alt="Mercedes-AMG">
-                        <div class="card-body">
-                            <h5 class="card-title">Mercedes-AMG CLE 53 Coupé</h5>
-                            <ul class="card-text">
-                                <li>3 literes motor</li>
-                                <li>elektromos turbófeltöltő</li>
-                                <li>443 HP</li>
-                                <li>AMG line</li>
-                                <li>4MATIC+ összkerékhajtás</li>
-                            </ul>
-                            <p class="card-price">50,000 Ft/Nap</p>
-
-                        </div>
-                    </div>
-
-
-                    <div class="card ">
-                        <img src="kepek/G.jpg" class="card-img-top" alt="Opel Astra G">
-                        <div class="card-body">
-                            <h5 class="card-title">Opel Astra G OPC</h5>
-                            <ul class="card-text">
-                                <li>2.0 16V motor</li>
-                                <li>160 HP</li>
-                                <li>manuális váltó</li>
-                                <li>kúposztó</li>
-                                <li>megbízható</li>
-                            </ul>
-                            <p class="card-price">50,000 Ft/Nap</p>
-                        </div>
-                    </div>
-                    <div class="card ">
-                        <img src="kepek/typeR.jpeg" class="card-img-top" alt="2021 Honda Civic Type R">
-                        <div class="card-body">
-                            <h5 class="card-title">2021 Honda Civic Type R</h5>
-                            <ul class="card-text">
-                                <li>2.0 VTEC motor</li>
-                                <li>329 HP</li>
-                                <li>elsőkerékhajtás</li>
-                                <li> sportos</li>
-                                <li>gazdaságos</li>
-                            </ul>
-                            <p class="card-price">50,000 Ft/Nap</p>
-                        </div>
-                    </div>
-                    <div class="card ">
-                        <img src="kepek/1.9.jpg" class="card-img-top" alt="Volkswagen Passat B5">
-                        <div class="card-body">
-                            <h5 class="card-title">Volkswagen Passat B5</h5>
-                            <ul class="card-text">
-                                <li>1.9 PDTDI</li>
-                                <li>116 HP</li>
-                                <li>kormol</li>
-                                <li>gazdaságos</li>
-                                <li>popcorn</li>
-                            </ul>
-                            <p class="card-price">50,000 Ft/Nap</p>
-                        </div>
-                    </div>
-                    <div class="card ">
-                        <img src="kepek/argqv.webp" class="card-img-top" alt="Alfa Romeo Giulia Quadrofoglio Verde">
-                        <div class="card-body">
-                            <h5 class="card-title">Alfa Romeo Giulia Quadrofoglio Verde</h5>
-                            <ul class="card-text">
-                                <li>2.9 V6 motor</li>
-                                <li>510 HP</li>
-                                <li>végsebesség: 307 km/h</li>
-                                <li>hátsőkerekes</li>
-                                <li>szeret enni</li>
-                            </ul>
-                            <p class="card-price">50,000 Ft/Nap</p>
-                        </div>
-                    </div>
-
-
-                    <div class="card ">
-                        <img src="kepek/crafter.jpg" class="card-img-top" alt="VW Crafter">
-                        <div class="card-body">
-                            <h5 class="card-title">Volkswagen Crafter</h5>
-                            <ul class="card-text">
-                                <li>2.0 TDI</li>
-                                <li>hasznos teher: 1356 kg</li>
-                                <li>136 HP</li>
-                                <li>plató méretei: 2.85x2x0.40 (m)</li>
-                                <li>arrébb lehet vele állni</li>
-                            </ul>
-                            <p class="card-price">50,000 Ft/Nap</p>
-                        </div>
-                    </div>
-                    <div class="card ">
-                        <img src="kepek/sprinter.webp" class="card-img-top" alt="Mercedes Sprinter">
-                        <div class="card-body">
-                            <h5 class="card-title">Mercedes Sprinter</h5>
-                            <ul class="card-text">
-                                <li>2.1 CDI</li>
-                                <li>190 HP</li>
-                                <li>20 ülés</li>
-                                <li>5 t össztömeg</li>
-                                <li>D kat. jogosítvány + GKI kártya szükséges</li>
-                            </ul>
-                            <p class="card-price">50,000 Ft/Nap</p>
-                        </div>
-                    </div>
-                    <div class="card ">
-                        <img src="kepek/mantge.jpg" class="card-img-top" alt="MAN TGE">
-                        <div class="card-body">
-                            <h5 class="card-title">MAN TGE</h5>
-                            <ul class="card-text">
-                                <li>2.0 TDI</li>
-                                <li>163 HP</li>
-                                <li>raktér méretei: 595x200x265 (cm)</li>
-                                <li>18 m<sup>3</sup> raktér</li>
-                                <li>4x4 hajtás</li>
-                            </ul>
-                            <p class="card-price">50,000 Ft/Nap</p>
-                        </div>
-                    </div>
-                    <div class="card ">
-                        <img src="kepek/yaris.jpg" class="card-img-top" alt="Toyota Yaris">
-                        <div class="card-body">
-                            <h5 class="card-title">Toyota Yaris</h5>
-                            <ul class="card-text">
-                                <li>450 HP</li>
-                                <li>TOM-TECH futómű</li>
-                                <li>short shifter</li>
-                                <li>nyitott rendszer</li>
-                                <li>kagylóülések</li>
-                            </ul>
-                            <p class="card-price">50,000 Ft/Nap</p>
-                        </div>
-                    </div>
                 </div>
             </div>
 
+            <!-- Small top bar that appears when the page is scrolled -->
+            <div class="top-bar" id="topBar" aria-hidden="true">
+                <div class="brand">
+                    <h1>Autóbérlés</h1>
+                </div>
 
-        </div>
-    </main>
+            </div>
+        </header>
 
-    <footer class="bg-dark text-light py-4 ">
-        <div class="container text-center animateanimated animatefadeInUp">
+        <main class="main" style="margin-top: 7.5px; margin-bottom: 7.5px;" id="gorget">
             <div class="row">
-                <div class="col-md-4">
-                    <h5 class="font-weight-bold">Kapcsolat</h5>
-                    <p>Email: <a href="mailto:info@valutaexpress.hu">info@szaboberles.hu</a></p>
-                    <p>Telefon: +36 30 123 4567</p>
+                <div class="col-md-6">
+                    <h3 style="font-weight: bold;">Miért válasszon minket?</h3>
+                    <p>Gyors, egyszerű és megbízható autóbérlés</p>
+                    <p>Nálunk az autóbérlés nem bonyolult – pár perc alatt lefoglalhatja a járművet, amire szüksége van.
+                        Modern, jól karbantartott gépjárműparkunkkal és rugalmas feltételeinkkel biztosítjuk, hogy Ön
+                        mindig
+                        kényelmesen és biztonságban utazhasson.</p>
+                    <ul>
+                        <li>Kíváló ár-érték arány</li>
+                        <li>Átlátható bérlési feltételek</li>
+                        <li>Barátságos és segítőkész ügyfélszolgálat</li>
+                        <li>Folyamatosan karbantartott, tiszta autók</li>
+                    </ul>
                 </div>
-                <div class="col-md-4">
-                    <img src="kepek/sedan.png" alt="Logo" height="150">
-                </div>
-                <div class="col-md-4">
-                    <h5 class="font-weight-bold">Kövess minket</h5>
-                    <div class="d-flex justify-content-center">
-                        <a href="https://hu-hu.facebook.com/" class="text-body mx-2"><i
-                                class="fab fa-facebook fa-2x"></i></a>
-                        <a href="https://x.com/" class="text-body mx-2"><i class="fab fa-twitter fa-2x"></i></a>
-                        <a href="https://www.instagram.com/" class="text-body mx-2"><i
-                                class="fab fa-instagram fa-2x"></i></a>
-                    </div>
+                <div class="col-md-6">
+
+                    <img src="kepek/garage.jpg" alt="Car Image" class="img-fluid rounded shadow-lg kiemelkedik"
+                        style="left: 60%;">
                 </div>
             </div>
-            <p class="mt-3">© 2025 SzabóAutóbérlés. Minden jog fenntartva.</p>
-        </div>
-    </footer>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="kepek/csapatkep.png" alt="Car Image" class="img-fluid rounded shadow-lg kiemelkedik">
+                </div>
+                <div class="col-md-6">
+                    <h3 style="font-weight: bold;">Rólunk</h3>
+                    <p>A Szabó Autókölcsönzés egy családi vállalkozásként indult, mára pedig a régió egyik megbízható
+                        szereplőjévé vált az autóbérlés területén. Küldetésünk, hogy ügyfeleink gyorsan és
+                        problémamentesen
+                        találjanak megfelelő járművet akár üzleti útra, nyaralásra vagy hétvégi kiruccanásra.</br>
+                        A flottánkban megtalálhatóak a gazdaságos városi kisautóktól a családi egyterűeken át egészen a
+                        prémium kategóriás modellekig szinte minden járműtípus. Fontos számunkra az elégedettség, ezért
+                        minden bérlést személyre szabottan kezelünk.</p>
+                </div>
+            </div>
+            <div class="row" style="border-bottom: solid 2px grey;">
+                <div class="col-md-6">
+                    <h3 style="font-weight: bold;">Bérlési feltételek</h3>
+                    <ul>
+                        <li>Érvényes személyi igazolvány és jogosítvány (minimum 1 éves) szüksége.</li>
+                        <li>A bérlőnek legalább 18 évesnek kell lennie.</li>
+                    </ul>
+                    <h3 style="font-weight: bold;">Autó átvétele & visszaadása</h3>
+                    <ul>
+                        <li>Az autó átvételekor a bérlőnek alá kell írnia a bérleti szerződést és át kell vennie a
+                            járművet.
+                        </li>
+                        <li>Az autót tisztán és teljes tankkal kell visszaadni.</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h3 style="font-weight: bold;">Foglalás & fizetés:</h3>
+                    <ul>
+                        <li>A foglalás véglegesítéséhez előleg vagy teljes összeg befizetése szükséges.</li>
+                        <li>Elfogadott fizetési módok: készpénz, bankkártya, átutalás.</li>
+                    </ul>
+                    <h3 style="font-weight: bold;">Tilos:</h3>
+                    <ul>
+                        <li>A jármű bármiféle szándékos módosítása, rongálása.</li>
+                        <li>A jármű engedély nélküli továbbadása harmadik félnek.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 autok_tabla">
+                    <div class="card-container">
+                        <div class="card ">
+                            <img src="kepek/raptor.jfif" class="card-img-top" alt="Ford Raptor">
+                            <div class="card-body">
+                                <h5 class="card-title">Ford Raptor</h5>
+                                <ul class="card-text">
+                                    <li>3 literes V6 EcoBoost</li>
+                                    <li>4x4 hajtás</li>
+                                    <li>292 HP</li>
+                                    <li>felező</li>
+                                    <li>3500 kg a maximálisan vontatható tömeg</li>
+                                </ul>
+                                <p class="card-price">5 millio Ft/Nap</p>
+                            </div>
+                        </div>
+                        <div class="card ">
+                            <img src="kepek/xclass.jpg" class="card-img-top" alt="Mercedes Xclass">
+                            <div class="card-body">
+                                <h5 class="card-title">Mercedes Xclass</h5>
+                                <ul class="card-text">
+                                    <li>4.0 V8 motor</li>
+                                    <li>520 HP</li>
+                                    <li>4MATIC+</li>
+                                    <li>fényfíd</li>
+                                    <li>csörlő</li>
+                                </ul>
+                                <p class="card-price">100 000 Ft/Nap</p>
+                            </div>
+                        </div>
+                        <div class="card ">
+                            <img src="kepek/m4competition.webp" class="card-img-top" alt="BMW M4 Competition">
+                            <div class="card-body">
+                                <h5 class="card-title">BMW M4 Competition</h5>
+                                <ul class="card-text">
+                                    <li>3.0 soros 6 hengeres motor</li>
+                                    <li>510 HP</li>
+                                    <li>sport futómű</li>
+                                    <li>M packet</li>
+                                    <li>xDrive</li>
+                                </ul>
+                                <p class="card-price">80 000 Ft/Nap</p>
+                            </div>
+                        </div>
+                        <div class="card ">
+                            <img src="kepek/Mercedes-AMG.jpg" class="card-img-top" alt="Mercedes-AMG">
+                            <div class="card-body">
+                                <h5 class="card-title">Mercedes-AMG CLE 53 Coupé</h5>
+                                <ul class="card-text">
+                                    <li>3 literes motor</li>
+                                    <li>elektromos turbófeltöltő</li>
+                                    <li>443 HP</li>
+                                    <li>AMG line</li>
+                                    <li>4MATIC+ összkerékhajtás</li>
+                                </ul>
+                                <p class="card-price">50,000 Ft/Nap</p>
+
+                            </div>
+                        </div>
 
 
+                        <div class="card ">
+                            <img src="kepek/G.jpg" class="card-img-top" alt="Opel Astra G">
+                            <div class="card-body">
+                                <h5 class="card-title">Opel Astra G OPC</h5>
+                                <ul class="card-text">
+                                    <li>2.0 16V motor</li>
+                                    <li>160 HP</li>
+                                    <li>manuális váltó</li>
+                                    <li>kúposztó</li>
+                                    <li>megbízható</li>
+                                </ul>
+                                <p class="card-price">50,000 Ft/Nap</p>
+                            </div>
+                        </div>
+                        <div class="card ">
+                            <img src="kepek/typeR.jpeg" class="card-img-top" alt="2021 Honda Civic Type R">
+                            <div class="card-body">
+                                <h5 class="card-title">2021 Honda Civic Type R</h5>
+                                <ul class="card-text">
+                                    <li>2.0 VTEC motor</li>
+                                    <li>329 HP</li>
+                                    <li>elsőkerékhajtás</li>
+                                    <li> sportos</li>
+                                    <li>gazdaságos</li>
+                                </ul>
+                                <p class="card-price">50,000 Ft/Nap</p>
+                            </div>
+                        </div>
+                        <div class="card ">
+                            <img src="kepek/1.9.jpg" class="card-img-top" alt="Volkswagen Passat B5">
+                            <div class="card-body">
+                                <h5 class="card-title">Volkswagen Passat B5</h5>
+                                <ul class="card-text">
+                                    <li>1.9 PDTDI</li>
+                                    <li>116 HP</li>
+                                    <li>kormol</li>
+                                    <li>gazdaságos</li>
+                                    <li>popcorn</li>
+                                </ul>
+                                <p class="card-price">50,000 Ft/Nap</p>
+                            </div>
+                        </div>
+                        <div class="card ">
+                            <img src="kepek/argqv.webp" class="card-img-top" alt="Alfa Romeo Giulia Quadrofoglio Verde">
+                            <div class="card-body">
+                                <h5 class="card-title">Alfa Romeo Giulia Quadrofoglio Verde</h5>
+                                <ul class="card-text">
+                                    <li>2.9 V6 motor</li>
+                                    <li>510 HP</li>
+                                    <li>végsebesség: 307 km/h</li>
+                                    <li>hátsőkerekes</li>
+                                    <li>szeret enni</li>
+                                </ul>
+                                <p class="card-price">50,000 Ft/Nap</p>
+                            </div>
+                        </div>
+
+
+                        <div class="card ">
+                            <img src="kepek/crafter.jpg" class="card-img-top" alt="VW Crafter">
+                            <div class="card-body">
+                                <h5 class="card-title">Volkswagen Crafter</h5>
+                                <ul class="card-text">
+                                    <li>2.0 TDI</li>
+                                    <li>hasznos teher: 1356 kg</li>
+                                    <li>136 HP</li>
+                                    <li>plató méretei: 2.85x2x0.40 (m)</li>
+                                    <li>arrébb lehet vele állni</li>
+                                </ul>
+                                <p class="card-price">50,000 Ft/Nap</p>
+                            </div>
+                        </div>
+                        <div class="card ">
+                            <img src="kepek/sprinter.webp" class="card-img-top" alt="Mercedes Sprinter">
+                            <div class="card-body">
+                                <h5 class="card-title">Mercedes Sprinter</h5>
+                                <ul class="card-text">
+                                    <li>2.1 CDI</li>
+                                    <li>190 HP</li>
+                                    <li>20 ülés</li>
+                                    <li>5 t össztömeg</li>
+                                    <li>D kat. jogosítvány + GKI kártya szükséges</li>
+                                </ul>
+                                <p class="card-price">50,000 Ft/Nap</p>
+                            </div>
+                        </div>
+                        <div class="card ">
+                            <img src="kepek/mantge.jpg" class="card-img-top" alt="MAN TGE">
+                            <div class="card-body">
+                                <h5 class="card-title">MAN TGE</h5>
+                                <ul class="card-text">
+                                    <li>2.0 TDI</li>
+                                    <li>163 HP</li>
+                                    <li>raktér méretei: 595x200x265 (cm)</li>
+                                    <li>18 m<sup>3</sup> raktér</li>
+                                    <li>4x4 hajtás</li>
+                                </ul>
+                                <p class="card-price">50,000 Ft/Nap</p>
+                            </div>
+                        </div>
+                        <div class="card ">
+                            <img src="kepek/yaris.jpg" class="card-img-top" alt="Toyota Yaris">
+                            <div class="card-body">
+                                <h5 class="card-title">Toyota Yaris</h5>
+                                <ul class="card-text">
+                                    <li>450 HP</li>
+                                    <li>TOM-TECH futómű</li>
+                                    <li>short shifter</li>
+                                    <li>nyitott rendszer</li>
+                                    <li>kagylóülések</li>
+                                </ul>
+                                <p class="card-price">50,000 Ft/Nap</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </main>
+
+        <footer class="bg-dark text-light py-4 ">
+            <div class="container text-center animateanimated animatefadeInUp">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h5 class="font-weight-bold">Kapcsolat</h5>
+                        <p>Email: <a href="mailto:info@valutaexpress.hu">info@szaboberles.hu</a></p>
+                        <p>Telefon: +36 30 123 4567</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="kepek/sedan.png" alt="Logo" height="150">
+                    </div>
+                    <div class="col-md-4">
+                        <h5 class="font-weight-bold">Kövess minket</h5>
+                        <div class="d-flex justify-content-center">
+                            <a href="https://hu-hu.facebook.com/" class="text-body mx-2"><i
+                                    class="fab fa-facebook fa-2x"></i></a>
+                            <a href="https://x.com/" class="text-body mx-2"><i class="fab fa-twitter fa-2x"></i></a>
+                            <a href="https://www.instagram.com/" class="text-body mx-2"><i
+                                    class="fab fa-instagram fa-2x"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <p class="mt-3">© 2025 <button id="toggleBtn" class="btn btn-primary mb-4">SzabóAutóbérlés</button>.
+                    Minden jog fenntartva.</p>
+            </div>
+        </footer>
+
+    </div>
+    <div id="secondRow" class=" d-none">
+        <header>
+            <nav class="navbar navbar-expand-sm bg-light navbar-light">
+                <div class="container-fluid">
+                    <h1>Autóbérlés</h1>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <!-- CSAK A FORM KÓDJA – folytatás/bővített változat (Bootstrap + Font Awesome + anime.js támogatott) -->
+            <form id="rentalForm" class="needs-validation" novalidate>
+                <!-- Visszajelzés helye -->
+                <div id="formAlert" class="alert alert-success d-none" role="alert">
+                    <i class="fa-solid fa-circle-check me-2"></i> Köszönjük! Az űrlap adatai rögzítésre kerültek.
+                </div>
+
+                <!-- 1. sor: Név, E-mail -->
+                <div class="row g-3">
+                    <div class="col-md-6 form-item">
+                        <label for="fullName" class="form-label">
+                            <i class="fa-solid fa-user me-1"></i> Teljes név
+                        </label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+                            <input type="text" class="form-control" id="fullName" name="fullName"
+                                placeholder="Pl. Kovács Anna" required minlength="2" autocomplete="name">
+                            <div class="invalid-feedback">Kérlek add meg a neved (min. 2 karakter)!</div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 form-item">
+                        <label for="email" class="form-label">
+                            <i class="fa-solid fa-envelope me-1"></i> E-mail cím
+                        </label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
+                            <input type="email" class="form-control" id="email" name="email"
+                                placeholder="pl. te@pelda.hu" required autocomplete="email" inputmode="email">
+                            <div class="invalid-feedback">Érvényes e-mail címet adj meg!</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. sor: Telefon, Születési dátum -->
+                <div class="row g-3 mt-0">
+                    <div class="col-md-6 form-item">
+                        <label for="phone" class="form-label">
+                            <i class="fa-solid fa-phone me-1"></i> Telefonszám
+                        </label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fa-solid fa-phone"></i></span>
+                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="+36 30 123 4567"
+                                pattern="^\+?\d[\d\s\-]{7,}$" required autocomplete="tel" inputmode="tel">
+                            <div class="invalid-feedback">Adj meg érvényes telefonszámot!</div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 form-item">
+                        <label for="birthDate" class="form-label">
+                            <i class="fa-solid fa-cake-candles me-1"></i> Születési dátum
+                        </label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fa-solid fa-calendar-day"></i></span>
+                            <input type="date" class="form-control" id="birthDate" name="birthDate" required>
+                            <div class="invalid-feedback">Kérlek add meg a születési dátumod (minimum 18 éves)!</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. sor: Bérlés mettől–meddig -->
+                <div class="row g-3 mt-0">
+                    <div class="col-md-6 form-item">
+                        <label for="rentalStart" class="form-label">
+                            <i class="fa-solid fa-calendar-plus me-1"></i> Bérlés kezdete (mettől)
+                        </label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fa-solid fa-calendar-plus"></i></span>
+                            <input type="date" class="form-control" id="rentalStart" name="rentalStart" required>
+                            <div class="invalid-feedback">Add meg a bérlés kezdetét!</div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 form-item">
+                        <label for="rentalEnd" class="form-label">
+                            <i class="fa-solid fa-calendar-check me-1"></i> Bérlés vége (meddig)
+                        </label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fa-solid fa-calendar-check"></i></span>
+                            <input type="date" class="form-control" id="rentalEnd" name="rentalEnd" required>
+                            <div class="invalid-feedback">Add meg a bérlés végét (nem lehet a kezdet előtt)!</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Összegzés: élő nap-számláló -->
+                <div class="row mt-2">
+                    <div class="col">
+                        <div id="rentalSummary" class="small text-muted" aria-live="polite">
+                            <i class="fa-regular fa-clock me-1"></i> Válaszd ki a dátumokat a bérlés időtartamához.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Opcionális megjegyzés -->
+                <div class="row g-3 mt-0">
+                    <div class="col-12 form-item">
+                        <label for="notes" class="form-label">
+                            <i class="fa-regular fa-comment-dots me-1"></i> Megjegyzés (opcionális)
+                        </label>
+                        <textarea class="form-control" id="notes" name="notes" rows="3"
+                            placeholder="Ide írhatod a különleges kéréseket..."></textarea>
+                    </div>
+                </div>
+
+                <!-- Adatkezelési hozzájárulás -->
+                <div class="row mt-3">
+                    <div class="col">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="1" id="consent" name="consent"
+                                required>
+                            <label class="form-check-label" for="consent">
+                                Hozzájárulok az adataim kezeléséhez az <adatkezelési tájékoztató</a> szerint.
+                            </label>
+                            <div class="invalid-feedback">A hozzájárulás megadása kötelező.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gombok -->
+                <div class="row mt-4">
+                    <div class="col-12 d-grid d-md-flex gap-2">
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <span class="btn-icon me-2"><i class="fa-solid fa-paper-plane"></i></span>
+                            <span class="btn-label">Küldés</span>
+                        </button>
+                        <button type="reset" class="btn btn-outline-secondary btn-lg">
+                            <i class="fa-solid fa-rotate-left me-2"></i> Alaphelyzet
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+            
+        </main>
+        <footer class="bg-dark text-light py-4 ">
+            <div class="container text-center animateanimated animatefadeInUp">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h5 class="font-weight-bold">Kapcsolat</h5>
+                        <p>Email: <a href="mailto:info@valutaexpress.hu">info@szaboberles.hu</a></p>
+                        <p>Telefon: +36 30 123 4567</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="kepek/sedan.png" alt="Logo" height="150">
+                    </div>
+                    <div class="col-md-4">
+                        <h5 class="font-weight-bold">Kövess minket</h5>
+                        <div class="d-flex justify-content-center">
+                            <a href="https://hu-hu.facebook.com/" class="text-body mx-2"><i
+                                    class="fab fa-facebook fa-2x"></i></a>
+                            <a href="https://x.com/" class="text-body mx-2"><i class="fab fa-twitter fa-2x"></i></a>
+                            <a href="https://www.instagram.com/" class="text-body mx-2"><i
+                                    class="fab fa-instagram fa-2x"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <p class="mt-3">© 2025 <button id="toggleBtn" class="btn btn-primary mb-4">SzabóAutóbérlés</button>.
+                    Minden jog fenntartva.</p>
+            </div>
+        </footer>
+    </div>
 </body>
 
 </html>

@@ -207,3 +207,7 @@ main {
     display: block;
     cursor: zoom-in;
 }
+/* Form styles */
+form {
+    margin: 3% auto 3% auto;   
+}
