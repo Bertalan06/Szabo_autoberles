@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autobérlés</title>
+    <link rel="website icon" type="png" href="kepek/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoA6VZgQG1F1Qp1rZlKj9z6Y5n0RSu1z9F1F1F1F1F1F1F1F" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qQ2iX+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- https://animate.style/ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+    <header class="header">
+        <!-- Full-viewport hero with background image -->
+        <div id="hero">
+            <div class="hero-content">
+                <h1 style="margin: auto; text-align: center;">Autóbérlés</h1>
+                <h3>Megbízható, gyors és egyszerű autóbérlés Ikerváron! Csak és kizárólag kíváló
+                    állapotú gépsárkányok!</h3>
+                <button type="button" class="btn btn-primary" id="scroll-for">Görgess le!</button>
+            </div>
+        </div>
+
+        <!-- Small top bar that appears when the page is scrolled -->
+        <div class="top-bar" id="topBar" aria-hidden="true">
+            <div class="brand">
+                <h1>Autóbérlés</h1>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="main" style="margin-top: 7.5px; margin-bottom: 7.5px;"id="gorget">
+        <div class="row">
+            <div class="col-md-6">
+                <h3 style="font-weight: bold;" >Miért válasszon minket?</h3>
+                <p>Gyors, egyszerű és megbízható autóbérlés</p>
+                <p>Nálunk az autóbérlés nem bonyolult – pár perc alatt lefoglalhatja a járművet, amire szüksége van.
+                    Modern, jól karbantartott gépjárműparkunkkal és rugalmas feltételeinkkel biztosítjuk, hogy Ön mindig
+                    kényelmesen és biztonságban utazhasson.</p>
+                <ul>
+                    <li>Kíváló ár-érték arány</li>
+                    <li>Átlátható bérlési feltételek</li>
+                    <li>Barátságos és segítőkész ügyfélszolgálat</li>
+                    <li>Folyamatosan karbantartott, tiszta autók</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+
+                <img src="kepek/garage.jpg" alt="Car Image" class="img-fluid rounded shadow-lg kiemelkedik" style="left: 60%;">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="kepek/csapatkep.png" alt="Car Image" class="img-fluid rounded shadow-lg kiemelkedik">
+            </div>
+            <div class="col-md-6">
+                <h3 style="font-weight: bold;">Rólunk</h3>
+                <p>A Szabó Autókölcsönzés egy családi vállalkozásként indult, mára pedig a régió egyik megbízható
+                    szereplőjévé vált az autóbérlés területén. Küldetésünk, hogy ügyfeleink gyorsan és problémamentesen
+                    találjanak megfelelő járművet akár üzleti útra, nyaralásra vagy hétvégi kiruccanásra.</br>
+                    A flottánkban megtalálhatóak a gazdaságos városi kisautóktól a családi egyterűeken át egészen a
+                    prémium kategóriás modellekig szinte minden járműtípus. Fontos számunkra az elégedettség, ezért
+                    minden bérlést személyre szabottan kezelünk.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-light py-4 ">
+        <div class="container text-center animateanimated animatefadeInUp">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5 class="font-weight-bold">Kapcsolat</h5>
+                    <p>Email: <a href="mailto:info@valutaexpress.hu">info@szaboberles.hu</a></p>
+                    <p>Telefon: +36 30 123 4567</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="kepek/sedan.png" alt="Logo" height="150">
+                </div>
+                <div class="col-md-4">
+                    <h5 class="font-weight-bold">Kövess minket</h5>
+                    <div class="d-flex justify-content-center">
+                        <a href="https://hu-hu.facebook.com/" class="text-body mx-2"><i
+                                class="fab fa-facebook fa-2x"></i></a>
+                        <a href="https://x.com/" class="text-body mx-2"><i class="fab fa-twitter fa-2x"></i></a>
+                        <a href="https://www.instagram.com/" class="text-body mx-2"><i
+                                class="fab fa-instagram fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <p class="mt-3">© 2025 SzabóAutóbérlés. Minden jog fenntartva.</p>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

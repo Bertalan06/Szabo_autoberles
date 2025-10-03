@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial;
+    color: #111;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: "header" "main" "footer";
+    min-height: 100vh;
+}
+
+/* HERO */
+#hero {
+    grid-area: header;
+    height: 100vh;
+    background-image: url('kepek/fej.jpg');
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+#hero .hero-content h1 {
+    font-size: clamp(2rem, 6vw, 4.5rem);
+    text-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Top bar (hidden initially) */
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.25rem;
+    transition: height 240ms ease, background-color 240ms ease, box-shadow 240ms ease;
+    overflow: hidden;
+    z-index: 80;
+}
+
+.top-bar .brand {
+    font-weight: 700;
+    text-align: center;
+    margin: auto;
+}
+
+.top-bar .mini-nav a {
+    text-decoration: none;
+    margin-left: 0.75rem;
+    color: #222;
+}
+
+/* When scrolled, show a compact bar */
+.top-bar.show {
+    height: 52px;
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* page content spacing */
+main {
+    grid-area: main;
+    background: #fff;
+}
+
+main .page-inner {
+    padding: 2rem;
+    min-height: 800px;
+}
+
+.content-section {
+    height: 200vw;
+}
+
+footer {
+    grid-area: footer;
+    padding: 1rem 2rem;
+    background: #f8f8f8;
+}
+
+/* Grid layout*/
+.gridescucc {
+    grid-template-areas:
+        "header header header" 40vh "main main main" auto
+        "footer footer footer" auto;
+}
+
+header.header {
+    grid-area: header;
+}
+
+main.main {
+    grid-area: main;
+}
+
+footer.footer {
+    grid-area: footer;
+}
+
+main {
+    margin: auto 10% auto 10%;
+}
+
+.elsokep {
+
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .12);
+    transition: transform .3s ease, box-shadow .3s ease, filter .3s ease;
+
+}
+
+.kiemelkedik:hover {
+
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, .18);
+    filter: contrast(1.05) saturate(1.05);
+
+
+}
