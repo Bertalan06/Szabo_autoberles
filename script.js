@@ -1,3 +1,22 @@
+/* toggle rows */
+
+document.addEventListener('DOMContentLoaded', function () {
+    const gomb = document.getElementById('toggleBtn');
+    const fr = document.getElementById('firstRow');
+    const sr = document.getElementById('secondRow');
+
+    if (gomb && fr && sr) {
+        gomb.addEventListener('click', function () {
+            if (fr.classList.contains('d-none')) {
+                fr.classList.remove('d-none');
+                sr.classList.add('d-none');
+            } else {
+                fr.classList.add('d-none');
+                sr.classList.remove('d-none');
+            }
+        });
+    }
+});
 document.addEventListener('DOMContentLoaded', function () {
     const topBar = document.querySelector('.top-bar');
     const hero = document.getElementById('hero');
@@ -83,22 +102,9 @@ document.addEventListener("DOMContentLoaded", function () {
         hideImgOverlay();
     }, { passive: true });
 });
-document.addEventListener('DOMContentLoaded', function () {
-    const gomb = document.getElementById('toggleBtn');
-    const fr = document.getElementById('firstRow');
-    const sr = document.getElementById('secondRow');
-    if (gomb && fr && sr) {
-        gomb.addEventListener('click', function () {
-            if (fr.classList.contains('d-none')) {
-                fr.classList.remove('d-none');
-                sr.classList.add('d-none');
-            } else {
-                fr.classList.add('d-none');
-                sr.classList.remove('d-none');
-            }
-        });
-    }
-});
+
+
+
 
 /* form */
 (() => {
