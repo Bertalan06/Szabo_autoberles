@@ -1,19 +1,22 @@
 /* toggle rows */
 
 document.addEventListener('DOMContentLoaded', function () {
-    const gomb = document.getElementById('toggleBtn');
+    // Support multiple toggle buttons (page contains two buttons with same id currently)
+    const gombok = document.querySelectorAll('#toggleBtn');
     const fr = document.getElementById('firstRow');
     const sr = document.getElementById('secondRow');
 
-    if (gomb && fr && sr) {
-        gomb.addEventListener('click', function () {
-            if (fr.classList.contains('d-none')) {
-                fr.classList.remove('d-none');
-                sr.classList.add('d-none');
-            } else {
-                fr.classList.add('d-none');
-                sr.classList.remove('d-none');
-            }
+    if (gombok.length && fr && sr) {
+        gombok.forEach(gomb => {
+            gomb.addEventListener('click', function () {
+                if (fr.classList.contains('d-none')) {
+                    fr.classList.remove('d-none');
+                    sr.classList.add('d-none');
+                } else {
+                    fr.classList.add('d-none');
+                    sr.classList.remove('d-none');
+                }
+            });
         });
     }
 });
