@@ -326,13 +326,23 @@
         <header>
             <nav class="navbar navbar-expand-sm bg-light navbar-light">
                 <div class="container-fluid">
-                    <h1>Autóbérlés</h1>
+                    <h1 class="text-center w-100">Autóbérlés</h1>
                 </div>
             </nav>
         </header>
         <main>
+            <!-- kiválasztott autó megjelenítése (kitöltéskor ide kerül a választás) -->
+            <div id="selectedCarContainer" class="container mt-3">
+                <div class="alert alert-info d-flex align-items-center justify-content-between" id="selectedCarDisplay">
+                    <div id="selectedCarText">Nincs kiválasztott autó.</div>
+                    <button type="button" id="clearSelectedCarBtn" class="btn btn-sm btn-outline-danger ms-3" style="display:none;">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </div>
+            </div>
             <!-- CSAK A FORM KÓDJA – folytatás/bővített változat (Bootstrap + Font Awesome + anime.js támogatott) -->
             <form id="rentalForm" class="needs-validation" novalidate>
+                <input type="hidden" id="selectedCarInput" name="selectedCar" value="">
                 <!-- Visszajelzés helye -->
                 <div id="formAlert" class="alert alert-success d-none" role="alert">
                     <i class="fa-solid fa-circle-check me-2"></i> Köszönjük! Az űrlap adatai rögzítésre kerültek.
@@ -458,6 +468,7 @@
                             <span class="btn-icon me-2"><i class="fa-solid fa-paper-plane"></i></span>
                             <span class="btn-label">Küldés</span>
                         </button>
+                        
                         <button type="reset" class="btn btn-outline-secondary btn-lg">
                             <i class="fa-solid fa-rotate-left me-2"></i> Alaphelyzet
                         </button>

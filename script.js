@@ -106,6 +106,71 @@ document.addEventListener("DOMContentLoaded", function () {
     }, { passive: true });
 });
 
+// Inject "Bérlés" buttons into each card and wire up selection -> show form (secondRow)
+document.addEventListener('DOMContentLoaded', function () {
+    const cards = document.querySelectorAll('.card');
+    const selectedDisplay = document.getElementById('selectedCarDisplay');
+    const selectedCarText = document.getElementById('selectedCarText');
+    const clearBtn = document.getElementById('clearSelectedCarBtn');
+    const selectedInput = document.getElementById('selectedCarInput');
+    const firstRow = document.getElementById('firstRow');
+    const secondRow = document.getElementById('secondRow');
+
+    if (!cards.length) return;
+
+    cards.forEach((card, idx) => {
+        // ensure each card has an id for reference
+        if (!card.id) card.id = `car-${idx + 1}`;
+
+        // create button
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'btn btn-success mt-3 rent-btn';
+        btn.textContent = 'Bérlés';
+
+        // find card body to append the button
+        const body = card.querySelector('.card-body');
+        if (body) {
+            body.appendChild(btn);
+        } else {
+            card.appendChild(btn);
+        }
+
+        // get a readable title for the car (card-title) and image
+        const titleEl = card.querySelector('.card-title');
+        const imgEl = card.querySelector('.card-img-top');
+        const title = titleEl ? titleEl.textContent.trim() : card.id;
+        const imgSrc = imgEl ? (imgEl.src || imgEl.getAttribute('src')) : '';
+
+        btn.addEventListener('click', function () {
+            // populate selected display and hidden input
+            if (selectedCarText) {
+                selectedCarText.innerHTML = `Kiválasztott autó: <strong>${title}</strong>` +
+                    (imgSrc ? ` <img src="${imgSrc}" alt="${title}" style="height:40px; margin-left:8px; object-fit:cover;"/>` : '');
+            }
+            if (selectedInput) selectedInput.value = title;
+            if (clearBtn) clearBtn.style.display = '';
+
+            // show secondRow (form) and hide firstRow
+            if (firstRow && secondRow) {
+                firstRow.classList.add('d-none');
+                secondRow.classList.remove('d-none');
+                // scroll to top so form is visible
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        });
+    });
+
+    // clear selection handler
+    if (clearBtn) {
+        clearBtn.addEventListener('click', function () {
+            if (selectedCarText) selectedCarText.textContent = 'Nincs kiválasztott autó.';
+            if (selectedInput) selectedInput.value = '';
+            clearBtn.style.display = 'none';
+        });
+    }
+});
+
 
 
 
