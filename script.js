@@ -116,6 +116,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const firstRow = document.getElementById('firstRow');
     const secondRow = document.getElementById('secondRow');
 
+    // Ensure default state: no extra text and hide any selected images
+    const defaultExtra = document.getElementById('selectedCarExtra');
+    if (defaultExtra) defaultExtra.textContent = '';
+    const topImgInit = document.getElementById('selectedCarImg'); if (topImgInit) topImgInit.style.display = 'none';
+
     if (!cards.length) return;
 
     cards.forEach((card, idx) => {
@@ -143,13 +148,36 @@ document.addEventListener('DOMContentLoaded', function () {
         const imgSrc = imgEl ? (imgEl.src || imgEl.getAttribute('src')) : '';
 
         btn.addEventListener('click', function () {
+            // gather more details: features (ul li) and price
+            const featuresEl = card.querySelector('.card-text');
+            const priceEl = card.querySelector('.card-price');
+            const features = featuresEl ? Array.from(featuresEl.querySelectorAll('li')).map(li => li.textContent.trim()) : [];
+            const price = priceEl ? priceEl.textContent.trim() : '';
+
             // populate selected display and hidden input
-            if (selectedCarText) {
-                selectedCarText.innerHTML = `Kiválasztott autó: <strong>${title}</strong>` +
-                    (imgSrc ? ` <img src="${imgSrc}" alt="${title}" style="height:40px; margin-left:8px; object-fit:cover;"/>` : '');
-            }
+            if (selectedCarText) selectedCarText.innerHTML = 'Kiválasztott autó: <strong>' + title + '</strong>';
             if (selectedInput) selectedInput.value = title;
             if (clearBtn) clearBtn.style.display = '';
+
+            // image in top display
+            const topImg = document.getElementById('selectedCarImg');
+            if (topImg) {
+                if (imgSrc) {
+                    topImg.src = imgSrc;
+                    topImg.alt = title;
+                    topImg.style.display = '';
+                } else {
+                    topImg.style.display = 'none';
+                }
+            }
+
+            // extra small details text
+            const extra = document.getElementById('selectedCarExtra');
+            if (extra) extra.textContent = price || (features.length ? features.slice(0, 3).join(' · ') : '');
+
+            // All data is shown in the top selected display (no in-form duplicate)
+            // attach price and features inline (kept short)
+            if (extra) extra.textContent = price || (features.length ? features.slice(0, 3).join(' · ') : '');
 
             // show secondRow (form) and hide firstRow
             if (firstRow && secondRow) {
@@ -167,6 +195,9 @@ document.addEventListener('DOMContentLoaded', function () {
             if (selectedCarText) selectedCarText.textContent = 'Nincs kiválasztott autó.';
             if (selectedInput) selectedInput.value = '';
             clearBtn.style.display = 'none';
+            // hide top image and reset extra
+            const topImg = document.getElementById('selectedCarImg'); if (topImg) { topImg.src = ''; topImg.style.display = 'none'; }
+            const extra = document.getElementById('selectedCarExtra'); if (extra) extra.textContent = '';
         });
     }
 });

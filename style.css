@@ -207,6 +207,54 @@ main {
     display: block;
     cursor: zoom-in;
 }
+
+/* Selected car display (larger, decorative) */
+#selectedCarContainer {
+    margin-top: 1rem;
+}
+#selectedCarDisplay {
+    background: linear-gradient(180deg, #f8fbff, #ffffff);
+    border: 1px solid rgba(51, 149, 253, 0.15);
+    box-shadow: 0 6px 18px rgba(51,149,253,0.06);
+    border-radius: 12px;
+    padding: 1.25rem 1rem;
+    align-items: center;
+    gap: 1rem;
+}
+.selected-car-image {
+    height: 120px;
+    width: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #e6eefb;
+}
+.selected-car-details {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: 0;
+    white-space: nowrap;
+}
+.selected-car-details h5 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+.selected-car-details .small {
+    display: inline-block;
+    margin-top: 0;
+    color: #556;
+    white-space: nowrap;
+}
+/* ensure the text doesn't wrap to a second line */
+#selectedCarText, #selectedCarExtra {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.selected-car-details ul {
+    margin: 0.25rem 0 0 1rem;
+}
+/* removed in-form selected summary styles (we use only the top display now) */
 /* Form styles */
 form {
     margin: 3% auto 3% auto;   
