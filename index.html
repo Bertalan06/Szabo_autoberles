@@ -338,18 +338,19 @@
         <main>
             <!-- kiválasztott autó megjelenítése (kitöltéskor ide kerül a választás) -->
             <div id="selectedCarContainer" class="container mt-3">
-                <div class="alert alert-info d-flex align-items-center justify-content-between" id="selectedCarDisplay">
-                    <div class="d-flex align-items-center row">
+                <div class="alert alert-info d-flex align-items-center justify-content-between row" id="selectedCarDisplay">
+                    <div class="d-flex align-items-center">
 
                         <div class="col-md-6 ">
                             <img id="selectedCarImg" class="selected-car-image" src="" alt="" style="display:none;">
                         </div>
-                        <div class="selected-car-details ms-3 col-md-6 ">
-                            <div id="selectedCarText" style="text-wrap: wrap;">Nincs kiválasztott autó.</div>
-                            <div id="selectedCarExtra" class="small" style="text-wrap: wrap;"></div>
-                        </div>
+                        
 
                     </div>
+                    <div class="selected-car-details ms-3 col-md-6 ">
+                            <div id="selectedCarText" style="white-space: normal;">Nincs kiválasztott autó.</div>
+                            <div id="selectedCarExtra" class="small" style="white-space: normal;"></div>
+                        </div>
                     <button type="button" id="clearSelectedCarBtn" class="btn btn-sm btn-outline-danger ms-3"
                         style="display:none;">
                         <i class="fa-solid fa-trash"></i>
