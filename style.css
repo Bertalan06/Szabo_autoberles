@@ -133,6 +133,7 @@ main {
     transform: translateY(-4px) scale(1.02);
     box-shadow: 0 16px 40px rgba(0, 0, 0, .18);
     filter: contrast(1.05) saturate(1.05);
+    transition: transform .3s ease, box-shadow .3s ease, filter .3s ease;
 
 
 }
@@ -151,8 +152,10 @@ main {
     margin: 2rem 0;
     align-items: stretch;
 }
+
 .card-container .card {
-    flex: 1 1 220px; /* preferred base width */
+    flex: 1 1 220px;
+    /* preferred base width */
     min-width: 200px;
     max-width: 420px;
 }
@@ -212,14 +215,23 @@ main {
 #selectedCarContainer {
     margin-top: 1rem;
 }
+
 #selectedCarDisplay {
-    background: linear-gradient(180deg, #f8fbff, #ffffff);
-    border: 1px solid rgba(51, 149, 253, 0.15);
-    box-shadow: 0 6px 18px rgba(51,149,253,0.06);
+    background-color: whitesmoke;
+    border: 1px solid rgb(0, 0, 0);
+    box-shadow: 0 6px 18px rgba(51, 149, 253, 0.06);
     border-radius: 12px;
     padding: 1.25rem 1rem;
-    align-items: center;
     gap: 1rem;
+    padding-left: 0px;
+}
+@media screen and (max-width: 1200px) {
+    #selectedCarDisplay {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }  
+    
 }
 .selected-car-image {
     height: 120px;
@@ -228,6 +240,7 @@ main {
     border-radius: 8px;
     border: 1px solid #e6eefb;
 }
+
 .selected-car-details {
     display: flex;
     align-items: center;
@@ -235,27 +248,99 @@ main {
     min-width: 0;
     white-space: nowrap;
 }
+
 .selected-car-details h5 {
     margin: 0;
     font-size: 1.25rem;
 }
+
 .selected-car-details .small {
     display: inline-block;
     margin-top: 0;
     color: #556;
     white-space: nowrap;
 }
+
+.selectedCarDisplay>img {
+    border-radius: 20px;
+    border: 1px solid #e6eefb;
+}
+
 /* ensure the text doesn't wrap to a second line */
-#selectedCarText, #selectedCarExtra {
+#selectedCarText,
+#selectedCarExtra {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
 .selected-car-details ul {
     margin: 0.25rem 0 0 1rem;
 }
+
 /* removed in-form selected summary styles (we use only the top display now) */
 /* Form styles */
 form {
-    margin: 3% auto 3% auto;   
+    margin: 3% auto 3% auto;
+}
+
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+
+.btn_berles {
+    background-color: white;
+    color: #3395fd;
+    border: 1px solid #3395fd;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn_berles:hover {
+    background-color: #3395fd;
+    color: white;
+}
+
+.btn_berles span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.btn_berles span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    /* kicsit feljebb és enyhén nagyobb */
+    /* enyhén lejjebb húzva (kisebb vizuális eltolás) */
+    top: 45%;
+    transform: translateY(-50%) scale(1);
+    font-size: 1.1em;
+    right: -20px;
+    transition: transform 200ms ease, right 200ms ease, opacity 200ms ease;
+}
+
+.btn_berles:hover span {
+    padding-right: 15px;
+}
+
+.btn_berles:hover span:after {
+    /* hoverkor a nyíl kicsit nagyobb lesz és beúszik a helyére */
+    opacity: 1;
+    right: 0;
+    transform: translateY(-50%) scale(1.15);
 }
